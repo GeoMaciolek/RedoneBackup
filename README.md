@@ -61,7 +61,7 @@ If you would like to include update and backport repos to ensure that the packag
 * `ln -s /usr/bin/pcmanfm /usr/bin/nautilus`
 * `gconftool-2 --set /apps/maximus/undecorate --type BOOL false`
 * `rm /usr/bin/{rpcclient,smbcacls,smbclient,smbcquotas,smbget,smbspool,smbtar}`
-* `rm /usr/share/icons/\*/icon-theme.cache; rm -rf /usr/share/doc; rm -rf /usr/share/man`
+* `rm /usr/share/icons/*/icon-theme.cache; rm -rf /usr/share/doc; rm -rf /usr/share/man`
 
 These steps will download about 145MB. These packages form the bulk of the live CD's capabilities. It is possible that some of these packages are not required, or that many of the files they install can be safely removed before creating the filesystem image in order to save space.
 
@@ -78,10 +78,10 @@ At this point, the snapshot archive containing all new or modified files should 
 * Close this terminal
 * Return to the chroot terminal, and execute:
   * `cd /
-  * `dpkg -i adeskbar\*.deb`
+  * `dpkg -i adeskbar*.deb`
   * `apt-get --yes -f install`
   * `apt-get install python-wnck python-pyinotify python-alsaaudio python-vte python-xlib`
-  * `rm -rf \*.deb`
+  * `rm -rf *.deb`
 
 ### 7. Update plymouth splash screen
 
@@ -104,11 +104,11 @@ The previous step will have extracted the files that will rebrand the plymouth s
   * `dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge`
   * `fi`
   * `rm list.txt`
-* `rm /var/lib/dbus/machine-id; rm /sbin/initctl; dpkg-divert --rename --remove /sbin/initctl; apt-get clean; rm -rf /tmp/\*; rm /etc/resolv.conf; rm -rf /var/lib/apt/lists/????????\*; umount -lf /proc; umount -lf /sys; umount -lf /dev/pts; exit;`
+* `rm /var/lib/dbus/machine-id; rm /sbin/initctl; dpkg-divert --rename --remove /sbin/initctl; apt-get clean; rm -rf /tmp/*; rm /etc/resolv.conf; rm -rf /var/lib/apt/lists/????????*; umount -lf /proc; umount -lf /sys; umount -lf /dev/pts; exit;`
 * `umount -lf chroot/dev/; rm chroot/root/.bash_history`
 
 ### 9. Prepare to build the image
-* `apt-get install syslinux squashfs-tools genisoimage; mkdir -p image/casper image/isolinux image/install; cp chroot/boot/vmlinuz-3.2.\*-generic image/casper/vmlinuz; cp chroot/boot/initrd.img-3.2.\*-generic image/casper/initrd.lz; cp chroot/usr/lib/syslinux/vesamenu.c32 chroot/usr/lib/syslinux/isolinux.bin image/isolinux/; cp /boot/memtest86+.bin image/install/memtest`
+* `apt-get install syslinux squashfs-tools genisoimage; mkdir -p image/casper image/isolinux image/install; cp chroot/boot/vmlinuz-3.2.*-generic image/casper/vmlinuz; cp chroot/boot/initrd.img-3.2.*-generic image/casper/initrd.lz; cp chroot/usr/lib/syslinux/vesamenu.c32 chroot/usr/lib/syslinux/isolinux.bin image/isolinux/; cp /boot/memtest86+.bin image/install/memtest`
 
 ### 10. Create manifest
 
