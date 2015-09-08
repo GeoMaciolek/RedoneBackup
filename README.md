@@ -17,7 +17,7 @@ The **Redo Backup** LiveCD hasn't been updated since 2012; some of the software 
 #### ADeskBar
 
 | Package | Last Updated| Description | Advantages | Disadvantages|
-|-----|---------|-----|----|
+|-----|---------|-----|----|---|
 |[LXPanel](http://lxde.org/lxpanel/)| May 2015|LXDE Desktop Panel | Lightweight| ? |
 
 
