@@ -6,6 +6,31 @@ This is a clone of the source code for [Redo Backup](http://www.redobackup.org) 
 
 It is intended to become a fork & continuation.
 
+## Goals
+
+The **Redo Backup** LiveCD hasn't been updated since 2012; some of the software it uses has similar issues, such as [ADeskBar](http://adeskbar.tuxfamily.org/), not updated since mid 2011. This fork intends to use a more current base OS, and when needed to replace other aging software.
+
+**Redo Backup** was a great LiveCD, and with luck it will live on again!
+
+### Replacement Considerations
+
+#### ADeskBar
+
+| Package | Last Updated| Description | Advantages | Disadvantages|
+|-----|---------|-----|----|
+|[LXPanel](http://lxde.org/lxpanel/)| May 2015|LXDE Desktop Panel | Lightweight| ? |
+
+
+#### Ubuntu 12.04 (Base OS)
+
+| Package |Support Lifecycle|Description | Advantages | Disadvantages|
+|-----|----|-----|-----|----|
+|[Ubuntu 14.04 LTS](http://releases.ubuntu.com/14.04/)|Support to 2019-04 (5y support, new ver. every 2y)| Ubuntu Long-term support release|Obvious drop-in type replacement, Regular scheduled releases. 5 years security updates per LTS release|Ubuntu software foundation changes a lot. Increasingly bloated|
+|[Debian](http://www.debian.org)|~3 years support, releases every ~2 years|The "parent" distribution of Ubuntu|Fairly frequent releases, very Open-Source| Supported for ~3 years, LTS "goal" to support for 5 years. Not released on a schedule|
+|[CentOS](http://www.centos.org)|Release date + 10y|Open-source/free respin of Redhat Enterprise Linux|Supported for 10 years per release!|Different architechture, so more work. Smaller "base" package set. Infrequent new releases, not on a schedule|
+|[Fedora](http://www.fedoraproject.org)|Supported 18mo, released every 6mo|Open-source/free parent of Redhat Enterprise Linux|Frequent releases, fresh packages, many packages|Different architechture. Brief support window per version, neccesitating frequent rebuilds of & changes to Redone Backup|
+|[OpenSuSE](https://www.opensuse.org/en/)|?|Allows the use of [SuSE Studio](https://susestudio.com/) to build liveCDs, etc|Very different platform, I ([GeoffMaciolek](https://github.com/GeoffMaciolek) have little experience with it|
+
 ## Building
 
 ### Redone Backup / Clone Notes
@@ -69,7 +94,7 @@ These steps will download about 145MB. These packages form the bulk of the live 
 
 ### 6. Extract the changed files archive
 
-At this point, the snapshot archive containing all new or modified files should be extracted into the existing directory. Snapshot source files are available from the [https://sourceforge.net/projects/redobackup/files/src/ SourceForge download page].
+At this point, the snapshot archive containing all new or modified files should be extracted into the existing directory. Snapshot source files are available from the [Sourceforge Download Page](https://sourceforge.net/projects/redobackup/files/src/)
 
 * Open another shell terminal and change to the original working directory (the one that contains the "livecd" folder)
 * Enter the following commands. **Again, you must open a NEW terminal window before you execute these commands! See above.**
