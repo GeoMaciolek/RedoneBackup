@@ -29,7 +29,7 @@ The **Redo Backup** LiveCD hasn't been updated since 2012; some of the software 
 |[Debian](http://www.debian.org)|~3 years support, releases every ~2 years|The "parent" distribution of Ubuntu|Fairly frequent releases, very Open-Source| Supported for ~3 years, LTS "goal" to support for 5 years. Not released on a schedule|
 |[CentOS](http://www.centos.org)|Release date + 10y|Open-source/free respin of Redhat Enterprise Linux|Supported for 10 years per release!|Different architechture, so more work. Smaller "base" package set. Infrequent new releases, not on a schedule|
 |[Fedora](http://www.fedoraproject.org)|Supported 18mo, released every 6mo|Open-source/free parent of Redhat Enterprise Linux|Frequent releases, fresh packages, many packages|Different architechture. Brief support window per version, neccesitating frequent rebuilds of & changes to Redone Backup|
-|[OpenSuSE](https://www.opensuse.org/en/)|?|Allows the use of [SuSE Studio](https://susestudio.com/) to build liveCDs, etc|Very different platform, I ([GeoffMaciolek](https://github.com/GeoffMaciolek) have little experience with it|
+|[OpenSuSE](https://www.opensuse.org/en/)|?|Open source version of commercially supported SuSE Linux|Allows the use of [SuSE Studio](https://susestudio.com/) to build liveCDs, etc|Very different platform, I ([GeoffMaciolek](https://github.com/GeoffMaciolek) have little experience with it|
 
 ## Building
 
