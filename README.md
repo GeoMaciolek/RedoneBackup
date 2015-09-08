@@ -1,4 +1,4 @@
-# RedoneBackup
+# Redone Backup
 
 ## Overview
 
@@ -8,7 +8,9 @@ It is intended to become a fork & continuation.
 
 ## Building
 
-**Note!  The following is untested!**  It is copied verbatim from the [original SourceForge documentation](http://sourceforge.net/p/redobackup/wiki/Home/).  Beware formatting issues; asterisks may or may not have leading backslashes.  (To be fixed).  The documentation below refers to the project as **Redo Backup**," which is (or may be) copyrighted / trademarked by the original authors.  No claim of ownership is intended here.
+### Redone Backup / Clone Notes
+
+**Note!  The following is untested!**  It is copied verbatim from the [original SourceForge documentation](http://sourceforge.net/p/redobackup/wiki/Home/).  Beware possible formatting issues; if in doubt, check the original docs, and always use care.  The documentation below refers to the project as **Redo Backup**," which is (or may be) copyrighted / trademarked by the original authors.  No claim of ownership is intended here.
 
 ### Creating a Redo Backup Live CD from Scratch
 
@@ -77,7 +79,7 @@ At this point, the snapshot archive containing all new or modified files should 
   * `cp adeskbar*.deb livecd/chroot/`
 * Close this terminal
 * Return to the chroot terminal, and execute:
-  * `cd /
+  * `cd /`
   * `dpkg -i adeskbar*.deb`
   * `apt-get --yes -f install`
   * `apt-get install python-wnck python-pyinotify python-alsaaudio python-vte python-xlib`
@@ -129,7 +131,8 @@ These steps make the image conform to Ubuntu remix specs, which probably helps w
 #define DISKNUM 1
 #define DISKNUM1 1
 #define TOTALNUM 0
-#define TOTALNUM0 1```
+#define TOTALNUM0 1
+```
 * `touch image/ubuntu; mkdir image/.disk; cd image/.disk; touch base_installable; echo "full_cd/single" > cd_type; echo "Ubuntu Remix" > info; echo "http://redobackup.org" > release_notes_url; cd ../..`
 
 ### 11. Create ISO image
